@@ -57,12 +57,8 @@ describe("Netology.ru tests", () => {
     await clickElement(page, ".page-nav > a:nth-child(1)");
     await clickElement(page, "a.movie-seances__time");
     await clickElement(page, ".buying-scheme__row > span:nth-child(3)");
-    expect(
-      String(
-        await page.$eval("button", (button) => {
-          return button.disabled;
-        })
-      )
-    ).toContain("true");
+    expect(async () => {
+      await clickElement(page, ".buying-scheme__row > span:nth-child(3)");
+    }).toThrow();
   });
 });

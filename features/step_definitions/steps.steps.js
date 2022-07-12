@@ -23,7 +23,7 @@ Given("user is on {string} page", async function (string) {
   });
 });
 
-When("user choose day {string}", async function (string) {
+When("user choose day '2'And user choose chair '1' ", async function (string) {
   await clickElement(this.page, `${string}`);
 });
 When("user choose time {string}", async function (string) {
@@ -32,10 +32,10 @@ When("user choose time {string}", async function (string) {
 When("user choose chair {string}", async function (string) {
   await clickElement(this.page, `${string}`);
 });
-When("user click booking {string}", async function (string) {
+When("When user clicks accept button", async function (string) {
   await clickElement(this.page, `${string}`);
 });
-When("user click for qr! {string}", async function (string) {
+When("When user clicks accept button", async function (string) {
   await clickElement(this.page, `${string}`);
 });
 
